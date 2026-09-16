@@ -500,6 +500,7 @@ ${historyText}`
   });
 
   const responseText = await response.text();
+  console.log("WAKE_DEBUG:", response.status, response.headers.get("content-type"), responseText.slice(0, 500));
   let data;
   try {
     data = parseChatCompletionResponse(responseText, response.headers.get("content-type") || "");

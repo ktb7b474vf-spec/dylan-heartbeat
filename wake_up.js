@@ -426,7 +426,7 @@ async function runWakeUp() {
   const cleanMessages = stripPosition(messages);
 
   const historyText = cleanMessages
-    .slice(-40)
+    .slice(-4)
     .filter(msg => msg.role !== "system")
     .filter(msg => {
       const c = normalizeContentToText(msg.content);
